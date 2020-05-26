@@ -366,7 +366,9 @@ def fesom_plot2d_data(mesh,data,figsize=[],do_subplot=[],do_output=True,do_grid=
     cbar = plt.colorbar(hp1,cax=cax,ticks=clevel,drawedges=do_drawedges, \
                         extend='neither',extendrect=False,extendfrac=None,\
                         orientation=which_orient)
-    cbar.set_label(data.lname+' '+data.unit+'\n'+data.str_time+data.str_dep, size=fsize+2)
+    str_lsname=data.lname
+    if (len(str_lsname)>20): str_lsname=data.sname
+    cbar.set_label(str_lsname+' '+data.unit+'\n'+data.str_time+data.str_dep, size=fsize+2)
     cl = plt.getp(cbar.ax, 'ymajorticklabels')
     plt.setp(cl, fontsize=fsize)
     
