@@ -10,7 +10,6 @@ git clone https://github.com/FESOM/spheRlab.git spheRlab
 ```
 Build package:
 ```bash
-cd spheRlab/
 R CMD build spheRlab
 ```
 Make sure you have cdo installed (`cdo -V`) and launch R (type `R`).
